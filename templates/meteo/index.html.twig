@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <section class="section is-small">
+        <nav class="level">
+
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="heading">Ville</p>
+                    <p class="title">{{ meteoFiveDay.city.name }}</p>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="tile is-ancestor">
+                <div class="tile is-vertical is-10">
+                    <div class="tile">
+                        <div class="tile is-6 is-parent">
+                            {% include 'meteo/card.html.twig' with {'meteo' : meteoFiveDay.list.0, 'classes': 'tile is-child box'} %}
+                        </div>
+                        <div class="tile is-10 is-vertical">
+                            <div class="tile">
+                                <div class="tile is-parent">
+                                    {% include 'meteo/card.html.twig' with {'meteo' : meteoFiveDay.list.1, 'classes': 'tile is-child box'} %}
+
+                                </div>
+                                <div class="tile is-parent">
+                                    {% include 'meteo/card.html.twig' with {'meteo' : meteoFiveDay.list.2, 'classes': 'tile is-child box'} %}
+
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <div class="tile is-parent">
+                                    {% include 'meteo/card.html.twig' with {'meteo' : meteoFiveDay.list.3, 'classes': 'tile is-child box'} %}
+
+                                </div>
+                                <div class="tile is-parent">
+                                    {% include 'meteo/card.html.twig' with {'meteo' : meteoFiveDay.list.4, 'classes': 'tile is-child box'} %}
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}
+
+

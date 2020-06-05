@@ -1,0 +1,9 @@
+<article class="{{ classes }}">
+    <p class="title">{{ meteo.dt|date("l d-m-Y", "Europe/Paris") }}</p>
+    <span class="is-titleless">{{meteo.weather[0].main}}</span> <br>
+    <span class="temperature temp-min">Min : {{ meteo.temp.min|number_format }}°C</span>
+    <span class="temperature temp-max">Max : {{ meteo.temp.max|number_format }}°C</span>
+    <figure class="image is-96x96">
+        <img src="http://openweathermap.org/img/w/{{meteo.weather[0].icon}}.png">
+    </figure>
+</article>

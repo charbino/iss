@@ -1,0 +1,35 @@
+services:
+    processor.essence.download_data_file :
+        class: App\Import\Processor\Essence\DownloadDataFile
+        arguments:
+            - '@client.essence'
+            - '%kernel.project_dir%'
+            - '@filesystem'
+        tags:
+          - { name: importer.essence.processor, priority: 1, enabled: true}
+
+    processor.essence.extract_data_file :
+        class: App\Import\Processor\Essence\ExtractDataFile
+        arguments:
+            - '%kernel.project_dir%'
+            - '@filesystem'
+        tags:
+          - { name: importer.essence.processor, priority: 2, enabled: true}
+
+    processor.essence.serialize_data_file :
+        class: App\Import\Processor\Essence\SerializeDataFile
+        arguments:
+            - '%kernel.project_dir%'
+            - '@filesystem'
+            - '@cache.essence'
+        tags:
+          - { name: importer.essence.processor, priority: 3, enabled: true}
+
+    processor.essence.save_data_file :
+        class: App\Import\Processor\Essence\SaveDataFile
+        arguments:
+            - '%kernel.project_dir%'
+            - '@filesystem'
+            - '@doctrine.orm.entity_manager'
+        tags:
+          - { name: importer.essence.processor, priority: 4, enabled: true}

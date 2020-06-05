@@ -1,0 +1,1 @@
+{"base_url":"","routes":{"iss_position":{"tokens":[["text","\/iss\/position"]],"defaults":[],"requirements":[],"hosttokens":[],"methods":["GET"],"schemes":[]}},"prefix":"","host":"localhost","port":"","scheme":"http"}

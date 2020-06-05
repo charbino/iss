@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <section id="app-essence" data-path="{{ import.path }}" data-data="{{ data }}"></section>
+{% endblock %}
+
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('essence') }}
+{% endblock %}

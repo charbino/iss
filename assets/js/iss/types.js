@@ -1,0 +1,17 @@
+export const LOAD_MARKER = 'LOAD_MARKER';
+
+
+
+export const GET_LAT_POINT_ACTION = 'GET_LAT_POINT_ACTION';
+export const GET_LONG_POINT_ACTION = 'GET_LONG_POINT_ACTION';
+
+export const GET_ALTITUDE = 'GET_ALTITUDE';
+export const GET_DATE = 'GET_DATE';
+export const GET_LONGITUDE = 'GET_LONGITUDE';
+export const GET_LATIITUDE = 'GET_LATIITUDE';
+export const GET_SPEED = 'GET_SPEED';
+export const GET_VISIBILITY  = 'GET_VISIBILITY ';
+export const GET_UNITS = 'GET_UNITS';
+
+
+export const MUTATE_SET_MARKER = 'MUTATE_SET_MARKER';
